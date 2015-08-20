@@ -238,3 +238,15 @@ INFO:root:Script Finished at: 2015-08-18 09:29:51 PM Mountain Daylight Time
 INFO:root:------------------------------------------------------------------------
 INFO:root:------------------------------------------------------------------------
 INFO:root:Script Started at:  2015-08-18:31 10:05 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'tzlocal' is not defined
+INFO:root:Script Started at:  2015-08-19:00 10:38 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: getGdataCredentials() takes no arguments (4 given)
+INFO:root:Script Finished at: 2015-08-19 10:38:00 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:40 10:39 PM Mountain Daylight Time
+INFO:oauth2client.client:access_token is expired. Now: 2015-08-20 04:39:40.942000, token_expiry: 2015-08-19 05:10:28
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished at: 2015-08-19 10:39:41 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------

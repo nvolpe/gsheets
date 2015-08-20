@@ -14,170 +14,125 @@ Date: 8/16/2015
 import json, sys, smtplib, logging, time, datetime, csv
 import gspread, dateutil
 import config as config
-import gdata.gauth
-import gdata
-import gdata.spreadsheet.service
+#import gdata.gauth
+#import gdata
+#import gdata.spreadsheet.service
 
 from dateutil.tz import tzlocal
-from oauth2client.client import SignedJwtAssertionCredentials
+#from oauth2client.client import SignedJwtAssertionCredentials
+
+import json
+#import webbrowser
+import httplib2
+from oauth2client.file import Storage
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.tools import run
+import gdata.docs.service
+import gdata.spreadsheet.service
+import gdata.spreadsheet.text_db
+#from pysqlite2 import dbapi2 as sqlite3
+#import pymssql
+import sys
+import datetime
+import os
+#import argparse
+#from collections import defaultdict
 
 
-def getCSVData():
-    """open a csv file and grab the value we care about"""
+def getGdataCredentials():
 
-    # open csv file
-    with open(config.csv_file_on_disk, 'rb') as file:
-        data = list(csv.reader(file)) # cache the data
+    client_secrets = "credentials.json"
+    storedCreds = "creds.dat"
+    scope = ["https://spreadsheets.google.com/feeds"]
+    force = False
+
+    storage = Storage(storedCreds)
+    credentials = storage.get()
+
+    if credentials is None or credentials.invalid or force:
+        credentials = run(flow_from_clientsecrets(client_secrets, scope=scope), storage)
+
+    if credentials.access_token_expired:
+        credentials.refresh(httplib2.Http())
+
+    return credentials
+
+def getAuthorizedSpreadsheetClient():
+
+    client_secrets = "client_secrets.json"
+    storedCreds = "creds.dat"
+    force = False
+
+    credentials = getGdataCredentials()
+    client = gdata.spreadsheet.service.SpreadsheetsService(additional_headers={'Authorization' : 'Bearer %s' % credentials.access_token})
+
+    return client
+
+
+#def getCSVData():
+#    """open a csv file and grab the value we care about"""
+
+#    # open csv file
+#    with open(config.csv_file_on_disk, 'rb') as file:
+#        data = list(csv.reader(file)) # cache the data
         
-    #close the file
-    file.close()
+#    #close the file
+#    file.close()
 
-    # get the value we care about and return it 
-    # example: data[2][3]
-    return data[config.row][config.column]
+#    # get the value we care about and return it 
+#    # example: data[2][3]
+#    return data[config.row][config.column]
 
-def editGoogleSheet(value, timeStamp):
-    """log in to google and edit our google sheet"""
+#def googleLogin(value, timeStamp):
+#    """log in to google and edit our google sheet"""
 
-    Client_id = '83927516433-bsgcm239afepee31la0sj2p9l9kk7ann.apps.googleusercontent.com'
-    Client_secret = '-vXiR6e5u38J0uI-h4boYKQ8'
-    Scope = 'https://spreadsheets.google.com/feeds/'
-    User_agent = 'python-sheets-project'
+#    Client_id = '83927516433-bsgcm239afepee31la0sj2p9l9kk7ann.apps.googleusercontent.com'
+#    Client_secret = '-vXiR6e5u38J0uI-h4boYKQ8'
+#    Scope = 'https://spreadsheets.google.com/feeds/'
+#    User_agent = 'python-sheets-project'
 
-    token = gdata.gauth.OAuth2Token(
-        client_id = Client_id,
-        client_secret = Client_secret,
-        scope = Scope,
-        user_agent = User_agent)
+#    token = gdata.gauth.OAuth2Token(
+#        client_id = Client_id,
+#        client_secret = Client_secret,
+#        scope = Scope,
+#        user_agent = User_agent)
 
-    ##url = token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob', approval_prompt='force')
-    print token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob')
+#    ##url = token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob', approval_prompt='force')
+#    print token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob')
 
-    code = raw_input("what is the code? ")
-    token.get_access_token(code) 
+#    code = raw_input("what is the code? ")
+#    token.get_access_token(code) 
 
-    spr_client = gdata.spreadsheet.service.SpreadsheetsService()
-
-    # get list of spreadsheets i am authorized to access
-    #gd_client = gdata.spreadsheets.client.SpreadsheetsClient()
-    #gd_client.auth_token = gdata.gauth.OAuth2TokenFromCredentials(credentials)
+#    spr_client = gdata.spreadsheet.service.SpreadsheetsService()
 
 
+#    print 'yes'
 
-    #spr_client.email = 'navolpe@gmail.com'
-    #spr_client.password ='fuckalex'
-    #spr_client.source = 'python-sheets-project'
-    #spr_client.ProgrammaticLogin()
+   
+#def sendEmail(exceptionMsg):
+#    """send email because i dont want the team to be unaware of mistakes"""
 
-    #documents_feed = spr_client.GetSpreadsheetsFeed('1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c')
+#    # Gmail Login
+#    username = config.username
+#    password = config.password
 
-    print 'yes'
+#    # message for the email
+#    FROM = config.username
+#    TO = config.recipients
+#    SUBJECT = config.subject
+#    TEXT = exceptionMsg
 
-    # Prepare the dictionary to write
-    #dict = {}
-    #dict['date'] = time.strftime('%m/%d/%Y')
-    #dict['time'] = time.strftime('%H:%M:%S')
-    #dict['weight'] = '123'
-    #print dict
+#    # Prepare actual message
+#    message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
+#    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
 
-    #entry = spr_client.InsertRow(dict, '1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c', 'Sheet1')
-
-    #if isinstance(entry, gdata.spreadsheet.SpreadsheetsList):
-    #  print "Insert row succeeded."
-    #else:
-    #  print "Insert row failed."
-
-    # Get the list of spreadsheets
-    #feed = spr_client.GetSpreadsheetsFeed('1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c')
-    #self._PrintFeed(feed)
-    #input = raw_input('\nSelection: ')
-    #id_parts = feed.entry[string.atoi(input)].id.text.split('/')
-    #self.curr_key = id_parts[len(id_parts) - 1]
-
-
-    #spreadsheet_feed = spr_client.GetFeed('http://spreadsheets.google.com/feeds/spreadsheets/private/full')
-    #first_entry = spreadsheet_feed.entry[0]
-    #key = first_entry.id.text.rsplit('/')[-1]
-    #worksheets_feed = spr_client.GetWorksheetsFeed(key)
-    #for entry in worksheets_feed.entry:
-    #    print entry.title.text
-
-    #doc_name = 'Questions for CDOT meeting'
-
-    #q = gdata.spreadsheet.service.DocumentQuery()
-    #q['title'] = doc_name
-    #q['title-exact'] = 'true'
-    #feed = spr_client.GetSpreadsheetsFeed(query=q)
-    #spreadsheet_id = feed.entry[0].id.text.rsplit('/',1)[1]
-    #feed = spr_client.GetWorksheetsFeed(spreadsheet_id)
-    #worksheet_id = feed.entry[0].id.text.rsplit('/',1)[1]
-
-
-    #print spreadsheet_id
-
-    #for document_entry in documents_feed:
-    #    print 'uh'
-    print 'shit'
-
-
-
-    #print "Refresh token\n"
-    #print token.refresh_token
-    #print "Access Token\n"
-    #print token.access_token
-
-    ## Access the Google Documents List API.
-    #docs_client = gdata.docs.client.DocsClient(source='python-sheets-project')
-    ## This is the token instantiated in the first section.
-    #docs_client = token.authorize(docs_client)
-    #docs_feed = client.GetDocumentListFeed()
-    #for entry in docs_feed.entry:
-    #  print entry.title.text
-
-    # get credentials from json file stored on disk.
-    #json_key = json.load(open(config.credentials_file_on_disk))
-
-    ## whatever this is, connects to google sheets
-    #scope = ['https://spreadsheets.google.com/feeds']
-
-    ## pluck credentials from file
-    #credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'], scope)
-
-    ## Login with your Google account
-    #gc = gspread.authorize(credentials)
-
-    ## Open a worksheet from spreadsheet with one shot
-    #wks = gc.open(config.spreadsheet_name).get_worksheet(config.sheet_index)
-
-    ## update cells
-    #wks.update_acell(config.cell_to_update, value)
-    #wks.update_acell(config.cell_for_date, timeStamp)
-
-
-def sendEmail(exceptionMsg):
-    """send email because i dont want the team to be unaware of mistakes"""
-
-    # Gmail Login
-    username = config.username
-    password = config.password
-
-    # message for the email
-    FROM = config.username
-    TO = config.recipients
-    SUBJECT = config.subject
-    TEXT = exceptionMsg
-
-    # Prepare actual message
-    message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
-    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
-
-    # Sending the mail  
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.ehlo()
-    server.starttls()
-    server.login(username, password) # https://myaccount.google.com/security need to turn on Allow less secure apps: ON
-    server.sendmail(FROM, TO, message)
-    server.close()
+#    # Sending the mail  
+#    server = smtplib.SMTP("smtp.gmail.com", 587)
+#    server.ehlo()
+#    server.starttls()
+#    server.login(username, password) # https://myaccount.google.com/security need to turn on Allow less secure apps: ON
+#    server.sendmail(FROM, TO, message)
+#    server.close()
 
 
 def main():
@@ -199,11 +154,23 @@ def main():
         # log start of script
         logging.info('Script Started at:  ' + startTimeFormat)
 
+        #get/set storage
+        storage = Storage("creds.dat")
+        credentials = storage.get()
+
+        if credentials is None or credentials.invalid:
+          credentials = run(flow_from_clientsecrets("credentials.json", scope=["https://spreadsheets.google.com/feeds"]), storage)
+
+        # Get authorized client
+        client = getAuthorizedSpreadsheetClient()
+        sheet = client.GetWorksheetsFeed('1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c')
+
+        print 'yay'
         # get the value we care about
         #csvValue = getCSVData()
 
         # send data to google
-        editGoogleSheet(123, startTimeFormat)
+        #editGoogleSheet(123, startTimeFormat)
 
     except Exception, e:
         # if an exception occurs, we should email an alert and log it
