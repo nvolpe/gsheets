@@ -11,32 +11,21 @@ Author: NVolpe
 Date: 8/16/2015
 '''
 
-import json, sys, smtplib, logging, time, datetime, csv
+import json, sys, smtplib, logging, time, datetime, csv, os
 import gspread, dateutil
-import config as config
-#import gdata.gauth
-#import gdata
-#import gdata.spreadsheet.service
-
-from dateutil.tz import tzlocal
-#from oauth2client.client import SignedJwtAssertionCredentials
-
 import json
-#import webbrowser
 import httplib2
-from oauth2client.file import Storage
-from oauth2client.client import flow_from_clientsecrets
-from oauth2client.tools import run
+
 import gdata.docs.service
 import gdata.spreadsheet.service
 import gdata.spreadsheet.text_db
-#from pysqlite2 import dbapi2 as sqlite3
-#import pymssql
-import sys
-import datetime
-import os
-#import argparse
-#from collections import defaultdict
+
+import config as config
+
+from oauth2client.file import Storage
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.tools import run
+from dateutil.tz import tzlocal
 
 
 def getGdataCredentials():
@@ -69,70 +58,63 @@ def getAuthorizedSpreadsheetClient():
     return client
 
 
-#def getCSVData():
-#    """open a csv file and grab the value we care about"""
+def getCSVData():
+    """open a csv file and grab the value we care about"""
 
-#    # open csv file
-#    with open(config.csv_file_on_disk, 'rb') as file:
-#        data = list(csv.reader(file)) # cache the data
+    # open csv file
+    with open(config.csv_file_on_disk, 'rb') as file:
+        data = list(csv.reader(file)) # cache the data
         
-#    #close the file
-#    file.close()
+    #close the file
+    file.close()
 
-#    # get the value we care about and return it 
-#    # example: data[2][3]
-#    return data[config.row][config.column]
+    # get the value we care about and return it 
+    # example: data[2][3]
+    return data[config.row][config.column]
 
-#def googleLogin(value, timeStamp):
-#    """log in to google and edit our google sheet"""
+def editGoogleSheet(client, data, timeStamp):
+    """edit our google sheet"""
+    #this will probably change to more data objects rather than 1 value and mulitple rows/colums to keep track of
 
-#    Client_id = '83927516433-bsgcm239afepee31la0sj2p9l9kk7ann.apps.googleusercontent.com'
-#    Client_secret = '-vXiR6e5u38J0uI-h4boYKQ8'
-#    Scope = 'https://spreadsheets.google.com/feeds/'
-#    User_agent = 'python-sheets-project'
+    #get the current worksheet
+    feed = client.GetWorksheetsFeed(config.speedsheet_id)
+    id_parts = feed.entry[0].id.text.split('/')
+    curr_wksht_id = id_parts[len(id_parts) - 1]
 
-#    token = gdata.gauth.OAuth2Token(
-#        client_id = Client_id,
-#        client_secret = Client_secret,
-#        scope = Scope,
-#        user_agent = User_agent)
+    row = config.cell_to_update[0]
+    col = config.cell_to_update[1]
 
-#    ##url = token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob', approval_prompt='force')
-#    print token.generate_authorize_url(redirect_uri='urn:ietf:wg:oauth:2.0:oob')
+    date_row = config.cell_for_date[0]
+    date_col = config.cell_for_date[1]
 
-#    code = raw_input("what is the code? ")
-#    token.get_access_token(code) 
-
-#    spr_client = gdata.spreadsheet.service.SpreadsheetsService()
-
-
-#    print 'yes'
+    client.UpdateCell(row, col, data, config.speedsheet_id, curr_wksht_id)
+    client.UpdateCell(date_row, date_col, timeStamp, config.speedsheet_id, curr_wksht_id)
 
    
-#def sendEmail(exceptionMsg):
-#    """send email because i dont want the team to be unaware of mistakes"""
+def sendEmail(exceptionMsg):
+    """send email because i dont want the team to be unaware of mistakes"""
 
-#    # Gmail Login
-#    username = config.username
-#    password = config.password
+    # Gmail Login
+    username = config.username
+    password = config.password
 
-#    # message for the email
-#    FROM = config.username
-#    TO = config.recipients
-#    SUBJECT = config.subject
-#    TEXT = exceptionMsg
+    # message for the email
+    FROM = config.username
+    TO = config.recipients
+    SUBJECT = config.subject
+    TEXT = exceptionMsg
 
-#    # Prepare actual message
-#    message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
-#    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
+    # Prepare actual message
+    message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
+    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
 
-#    # Sending the mail  
-#    server = smtplib.SMTP("smtp.gmail.com", 587)
-#    server.ehlo()
-#    server.starttls()
-#    server.login(username, password) # https://myaccount.google.com/security need to turn on Allow less secure apps: ON
-#    server.sendmail(FROM, TO, message)
-#    server.close()
+    # Sending the mail  
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.ehlo()
+    server.starttls()
+    server.login(username, password) # https://myaccount.google.com/security need to turn on Allow less secure apps: ON
+    server.sendmail(FROM, TO, message)
+    server.close()
 
 
 def main():
@@ -163,20 +145,19 @@ def main():
 
         # Get authorized client
         client = getAuthorizedSpreadsheetClient()
-        sheet = client.GetWorksheetsFeed('1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c')
 
-        print 'yay'
-        # get the value we care about
-        #csvValue = getCSVData()
+        # get the data we care about
+        csvValue = getCSVData()
 
         # send data to google
-        #editGoogleSheet(123, startTimeFormat)
+        editGoogleSheet(client, csvValue, startTimeFormat)
+
 
     except Exception, e:
         # if an exception occurs, we should email an alert and log it
         # -----------------------------------------------------------
         logging.warning('Script threw an execption: ' + str(e))
-        #sendEmail(e.message)
+        sendEmail(e.message)
         
         print 'Script threw an execption'
         print str(e.message)

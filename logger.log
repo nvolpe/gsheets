@@ -250,3 +250,72 @@ INFO:oauth2client.client:Refreshing access_token
 INFO:root:Script Finished at: 2015-08-19 10:39:41 PM Mountain Daylight Time
 INFO:root:------------------------------------------------------------------------
 INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:43 10:48 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for grid_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:48:44 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:27 10:49 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for grid_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:49:28 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:29 10:50 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:50:30 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:03 10:51 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:51:04 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:23 10:51 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:51:23 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:39 10:51 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:51:40 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:00 10:52 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:52:01 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:27 10:52 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid query parameter value for cell_id.', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-19 10:52:28 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:23 10:59 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'entry' is not defined
+INFO:root:Script Finished at: 2015-08-19 10:59:23 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:42 10:59 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 10:59:42 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:17 11:00 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 11:00:18 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:56 11:18 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 11:18:58 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:38 11:19 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 11:19:39 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:14 11:20 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 11:20:15 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-19:23 11:22 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-19 11:22:25 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
