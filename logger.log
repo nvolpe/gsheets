@@ -1,0 +1,240 @@
+INFO:root:Script Started
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439762792, 'iat': 1439759192}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2Mjc5MiwiaWF0IjoxNDM5NzU5MTkyfQ', 'Bidcvx05-NBF-dvzXHIi2ounGcDqJbwl_hSw9bxBMwpOC_FUaD1wvy042h3KIKRDyB_t7PB8MtSLxnrK6sYWgpXXMtRcrde5whi7z2rh6ORkmc3JUMspln6d6ae-IsjyCFY8pTLjpEe8gYZ2sWAc4rxwaOX1KSuMCR9vWmbqEKoMdpaWhuf416AlxYCsFxv62EU8n49mBNm1HOFSmyGTFrlstZ2A6Ouug5M0P4vsoR5hYP9X3R8uRwHiL54IT1rzNCe3OBlA21JF4H28XMcIOW-v87vozeIXP81YqoNGtSciutR8uv5qwk5csGNjE9aWReNgF1gA-3VRwcbRGFwfDg']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished
+WARNING:root:Script threw an execption
+INFO:root:Script Finished
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+WARNING:root:Script threw an execption
+INFO:root:Script Finished
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started
+INFO:root:20150816151928
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439763568, 'iat': 1439759968}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2MzU2OCwiaWF0IjoxNDM5NzU5OTY4fQ', 'QwwUNWekKTn4UZQTT_w9EQol5HGzdbf-f_gZaUmd_7oAxxq4OYBQryOw1W3m4UfnDgChT7Nut3NXaP13vgFjYFzMHwGqWohiMsK521Jx_aamyfFMeeO3QziYk_YPVjWcxkq7YJBH9UTjt_uwcqx-FbsL80_1V2wuXFXcjME3DiAlcQ5SFm-p5hPhzIKzMb585YpV21LP_Mal6-33DmR73uayhDSFOlMwt9-ix8_nbqFHB-QdMoqud4IRkeXwCCoqupt77Zn06u0Mm2zAGLbPfoq9fwC1_UM-Qc14xxK7YBkqgIU7OVKCTHDy_EUcC5QzG4_7Uj-IUPbkuFPSRdmrQA']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started
+INFO:root:2015-08-16 15:20:37
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439763637, 'iat': 1439760037}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2MzYzNywiaWF0IjoxNDM5NzYwMDM3fQ', 'ek_-aoQP453OFdubzO_LpP7r8_WKunUrMZ9qb2E2A1z1qcvO7Bg9Ymuc_3y6qeidWo1RFf3Vq7Cql3parK_su5DdY8MjB5SSW1v0c4F9HPG3_Ex-bL9MZ8ihRWEaMOy7HSYminufJVvAjmP_OdxitoT63ZCI8vxqbeV-o9s0Dng5IB_Em0cz-1QDIr2iM7rkLoLzARFznFrBXKYW1jAIvKMR5JyR_E46BJJRu1kNF9hLzwgAlAfzVnz_55xLdGCS469hh3Z8TEDl5C7_M_ziJqX5wNyrOt-uxat1LE6B9ywyP4o_Ub1Mi2P8klY64BhfRAQ4aYMPZ_2brfy7bu0o5g']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+WARNING:root:Script threw an execption
+INFO:root:Script Finished
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-16 04:05 PM Mountain Daylight Time
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439766312, 'iat': 1439762712}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2NjMxMiwiaWF0IjoxNDM5NzYyNzEyfQ', 'ubkFLJb5jCVyscRrYlll-Dr4hkKbyjVuQbeG5Hv8rmQEg3sWi6yzuF64_3WA8ERuRObeZabgYUpgYCBh2g5EPKbG38CQP-q5CQbXKtOQUVGpLP0y4ENjf5-QoFgCXNd11ocF0fpHx6plaA_YgcSlPqmN148v3lkPoZ_1fhoyqSSZhKDPKFXpdj2JzPe3rGP4VnVXWwXxs2KKODBZZKPtAFb40x7se3AexyTrsy0ZFhya74maRWvqij2qzldRjlPeC22h9AL6eUpeRY_eqFUd5mvkjLdQa0JdS2ZjwWd3_yangEmW1VAaHNGunb6isif-1ujuQ4xF4lwH24AVFLWnXw']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished at: 2015-08-16 04:05 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-16 04:07 PM Mountain Daylight Time
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439766474, 'iat': 1439762874}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2NjQ3NCwiaWF0IjoxNDM5NzYyODc0fQ', 'M_TMJu7mg_jg-rG4tLXHKKHA-zmyIDRN_2Pht0ADr6sxQF6kad4zZ8XyrldV8joi8xuyS_lo4cobYM5YnXRuILtySexTovZ9uX0DYkukhAvZYolrp87WuvNTcVpw9hu89WVk2Vk15He3ArGE1rM406avLg6_VWsFv5qmqMTyy_h3ivo90xwlLc7wR7fwdbNxRTuVTCBsll5IGx43eFdSrCTyhGf0WMpUqasLIrm7-k3l_TUoHyfKoVMQ6gYNm2OumLGh20j7ZwQlSfi2amKSyxBaYUkSlzzv5rs9ZqpDRgw0rV9tG8vuTGvSz78Z8gDBXnkek4SNkFc4V-r3Q6t0mA']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished at: 2015-08-16 04:07:56 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-16:03 04:43 PM Mountain Daylight Time
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439768583, 'iat': 1439764983}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc2ODU4MywiaWF0IjoxNDM5NzY0OTgzfQ', 'OOUr1H0MTuKw3EYp-_Fmx-Ap5Z9BQss_O5gWQB7B-a7pbtZHaYCK6QG02bCG3HHXbAWNipozNw-mQ3t5GqHbYicXKi_mQu1rwP8r4fw4iN-9Wz53qtbhhT5XdN3pVj5AgvnRxUYHOT_6QLvs_dDK_hSVJj2HvrGi-7TwGVCkCNkTuvDthZgeeEZ8B6PmlVxLkDz_A0YgUaVZ7r3Ksb6RwYRUqYvwSHl_G-HrQ5gXuGdis7OD0zcJGv23JLbn-fAFStqqk_aBa_1YrjY-56zc-nCnOccwkCcdgDzE2GSLGwQDeL6y_fu5fpqP6JnUSiIwZTaqeeK0srQ2gdrYKtd84w']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished at: 2015-08-16 04:43:07 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-16:11 05:12 PM Mountain Daylight Time
+DEBUG:oauth2client.client:{'iss': u'83927516433-785sqhah0rjmq4iu59881q0pvb7kfheq@developer.gserviceaccount.com', 'scope': 'https://spreadsheets.google.com/feeds', 'aud': 'https://accounts.google.com/o/oauth2/token', 'exp': 1439770331, 'iat': 1439766731}
+DEBUG:oauth2client.crypt:['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9', 'eyJpc3MiOiI4MzkyNzUxNjQzMy03ODVzcWhhaDByam1xNGl1NTk4ODFxMHB2YjdrZmhlcUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly9zcHJlYWRzaGVldHMuZ29vZ2xlLmNvbS9mZWVkcyIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTQzOTc3MDMzMSwiaWF0IjoxNDM5NzY2NzMxfQ', 'Xeh1oXXR9t6_Q6FFjPsGohAebQBnfYmwMsA3shOBv3eOMjfadHhUfdC20it1-M52ZZF_cpQlWWpG28eky7PqZz9EOz6OeiU6T6yrpMo23wro5j74q-nsRF8TBTnQ1O_W7iTwQJ_2VBJq3RCTCTN_lr8_FSlHv5oU_Q6nPDYJRWcxlZgFJmirU1CjY1hOn1rXzqj_vXXHS2T7STO6RGl1P8b3AyzpNtezoqw5mQSPrNJ0O3yyOd9XFgp4nbVgxr5thw2f6bJQf7V5Jp1erZBsPkKw19irqiXG36CFJZC19zLk1fXZSBVjv7hSAs3HktZk8ziulxoKgVislDuvj7lZyg']
+INFO:oauth2client.client:Refreshing access_token
+INFO:root:Script Finished at: 2015-08-16 05:12:14 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:29 09:35 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'csvValue' is not defined
+INFO:root:Script Finished at: 2015-08-17 09:35:31 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:57 09:35 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'csvValue' is not defined
+INFO:root:Script Finished at: 2015-08-17 09:35:58 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:05 09:36 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'csvValue' is not defined
+INFO:root:Script Finished at: 2015-08-17 09:36:06 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:27 09:36 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-17 09:42:01 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:03 09:42 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-17 09:43:31 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:32 09:43 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-17 09:53:17 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-17:18 09:53 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-17 09:53:38 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:33 08:07 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-18 08:08:01 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:19 08:08 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 'module' object has no attribute 'docs'
+INFO:root:Script Finished at: 2015-08-18 08:08:35 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:39 08:08 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 'module' object has no attribute 'docs'
+INFO:root:Script Finished at: 2015-08-18 08:08:59 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:38 08:09 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-18 08:09:39 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:51 08:09 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-18 08:09:54 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:25 08:10 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 
+INFO:root:Script Finished at: 2015-08-18 08:10:28 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:32 08:11 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-18 08:11:54 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:45 08:53 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 'module' object has no attribute 'spreadsheet'
+INFO:root:Script Finished at: 2015-08-18 08:53:45 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:36 08:54 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: 'module' object has no attribute 'spreadsheet'
+INFO:root:Script Finished at: 2015-08-18 08:54:36 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:52 08:54 PM Mountain Daylight Time
+INFO:root:Script Finished at: 2015-08-18 08:54:53 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:24 09:08 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: GetWorksheetsFeed() takes at least 2 arguments (1 given)
+INFO:root:Script Finished at: 2015-08-18 09:08:25 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:16 09:09 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:09:17 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:58 09:09 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:09:59 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:13 09:10 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:10:14 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:21 09:10 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:10:22 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:24 09:11 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:11:24 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:47 09:12 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:12:48 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:03 09:13 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:13:03 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:14 09:15 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:15:14 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:26 09:15 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:15:27 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:37 09:15 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 404, 'body': '<!DOCTYPE html><html lang="en" ><head><meta name="description" content="Web word processing, presentations and spreadsheets"><link rel="shortcut icon" href="//ssl.gstatic.com/docs/common/drive_favicon1.ico"><title>Google Drive -- Page Not Found</title><link href="//fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"><style>/* Copyright 2015 Google Inc. All Rights Reserved. */\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{color:#91959c;font-family:"Open Sans",Arial,sans-serif;font-size:27px;font-weight:300;position:absolute;text-shadow:0 1px 1px white;white-space:nowrap}#drive-logo img{padding:0 0.4em 0 0;position:relative;top:2px;vertical-align:middle}#drive-logo a{color:#91959c;text-decoration:none}#drive-logo span.goog-inline-block{margin-top:2px;vertical-align:top}</style><style type="text/css">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type="text/css">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div style="margin: auto; max-width: 750px;"><div style="margin: 80px 40px 20px 40px; position:relative; "><div style="position: absolute; top: -80px;"><h1 id="drive-logo"><a href="/"><img src="//www.google.com/images/logos/google_logo_41.png" width="116" height="41" alt="Google logo" ><span class="goog-inline-block">Drive</span></a></h1></div><div align="center"><p class="errorMessage" style="padding-top: 50px">Sorry, the file you have requested does not exist.</p><p> Please check the address and try again. </p><div style="background: #F0F6FF; border: 1px solid black; margin-top: 35px; padding: 10px 125px; width: 300px;"><p><strong>Get stuff done with Google Drive</strong></p><p>Apps in Google Drive make it easy to create, store and share online documents, spreadsheets, presentations and more.</p><p>Learn more at <a href="https://drive.google.com/start/apps">drive.google.com/start/apps</a>.</p></div></div></div></div></body></html>', 'reason': 'Not Found'}
+INFO:root:Script Finished at: 2015-08-18 09:15:37 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:32 09:18 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:18:32 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:11 09:20 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: no element found: line 1, column 0
+INFO:root:Script Finished at: 2015-08-18 09:20:11 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:31 09:24 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: {'status': 400, 'body': 'Invalid request URI', 'reason': 'Bad Request'}
+INFO:root:Script Finished at: 2015-08-18 09:24:32 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:39 09:27 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: global name 'weight' is not defined
+INFO:root:Script Finished at: 2015-08-18 09:27:39 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:52 09:27 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: mismatched tag: line 944, column 4
+INFO:root:Script Finished at: 2015-08-18 09:27:53 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:46 09:28 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: mismatched tag: line 944, column 4
+INFO:root:Script Finished at: 2015-08-18 09:28:47 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:19 09:29 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: mismatched tag: line 944, column 4
+INFO:root:Script Finished at: 2015-08-18 09:29:20 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:49 09:29 PM Mountain Daylight Time
+WARNING:root:Script threw an execption: mismatched tag: line 944, column 4
+INFO:root:Script Finished at: 2015-08-18 09:29:51 PM Mountain Daylight Time
+INFO:root:------------------------------------------------------------------------
+INFO:root:------------------------------------------------------------------------
+INFO:root:Script Started at:  2015-08-18:31 10:05 PM Mountain Daylight Time
