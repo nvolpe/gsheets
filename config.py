@@ -16,13 +16,29 @@ speedsheet_id = '1CJjBsF2rVYhkrfTMZ2yBNzNXrd8t-7ex9WlrKa04f7c'
 # worksheet index, Zero-based numbering
 sheet_index = 0 
 
-# google sheet cells to update, Alphanumeric ie: B1
-cell_to_update = [1, 3] 
-cell_for_date = [2, 4] 
+# cell for date
+cell_for_date = [4, 4] 
+cell_for_date_worksheet = 'suckadick'
 
-# csv cell location for the data
-row = 1
-column = 1
+
+data_lookup =  [
+    {
+        'sheet_name': 'suckadick',
+        'csv_location': [1, 1],
+        'gsheet_location': [10, 2]
+    },
+    {
+        'sheet_name': 'eatpussy',
+        'csv_location': [1, 2],
+        'gsheet_location': [11, 2]
+    },
+    {
+        'sheet_name': 'lickclit',
+        'csv_location': [2, 3],
+        'gsheet_location': [12, 2]
+    }
+]
+
 
 # google email account for sending warning email
 username = 'navolpe@gmail.com'

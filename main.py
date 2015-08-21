@@ -12,7 +12,7 @@ Date: 8/16/2015
 '''
 
 import json, sys, smtplib, logging, time, datetime, csv, os
-import gspread, dateutil
+import dateutil
 import json
 import httplib2
 
@@ -27,6 +27,12 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.tools import run
 from dateutil.tz import tzlocal
 
+
+class slut():
+    def __init__(self, sheet_name, location, value):
+        self.sheet_name = sheet_name
+        self.location = location
+        self.value = value
 
 def getGdataCredentials():
 
@@ -70,25 +76,78 @@ def getCSVData():
 
     # get the value we care about and return it 
     # example: data[2][3]
-    return data[config.row][config.column]
+
+    configData = config.data_lookup
+
+    gsheetData = []
+
+    for item in configData:
+        sheet_name = item['sheet_name']
+        csv_location = item['csv_location']
+        gsheet_location = item['gsheet_location']
+
+        value = data[csv_location[0]][csv_location[0]]
+
+        slutdata = slut(sheet_name, gsheet_location, value)
+        gsheetData.append(slutdata)
+
+        print 'data_for_gsheet: ' + value
+
+        #slut()
+        #print item[0]
+        #print item[1]
+
+    return gsheetData
 
 def editGoogleSheet(client, data, timeStamp):
     """edit our google sheet"""
     #this will probably change to more data objects rather than 1 value and mulitple rows/colums to keep track of
 
     #get the current worksheet
-    feed = client.GetWorksheetsFeed(config.speedsheet_id)
-    id_parts = feed.entry[0].id.text.split('/')
-    curr_wksht_id = id_parts[len(id_parts) - 1]
+    #feed = client.GetWorksheetsFeed(config.speedsheet_id)
+    #id_parts = feed.entry[0].id.text.split('/')
+    #curr_wksht_id = id_parts[len(id_parts) - 1]
 
-    row = config.cell_to_update[0]
-    col = config.cell_to_update[1]
+    entry  = client.GetSpreadsheetsFeed(config.speedsheet_id)
+    print entry.title
+    worksheet_feed  = client.GetWorksheetsFeed(config.speedsheet_id)
 
     date_row = config.cell_for_date[0]
     date_col = config.cell_for_date[1]
 
-    client.UpdateCell(row, col, data, config.speedsheet_id, curr_wksht_id)
-    client.UpdateCell(date_row, date_col, timeStamp, config.speedsheet_id, curr_wksht_id)
+
+    #find the sheet name we care about
+    for entry in worksheet_feed.entry:
+        if entry.title.text == config.cell_for_date_worksheet:
+            worksheet_key = entry.id.text.split('/')[-1]
+
+            #time stamp a cell plz
+            client.UpdateCell(date_row, date_col, timeStamp, config.speedsheet_id, worksheet_key)
+             
+
+    for d in data:
+
+        #find the sheet name we care about
+        for entry in worksheet_feed.entry:
+            if entry.title.text == d.sheet_name:
+                print 'yay suck a dick was found'
+                worksheet_entry = entry
+                break
+            else: # no-break
+                print "Worksheet not found!"
+
+        worksheet_key = worksheet_entry.id.text.split('/')[-1]
+
+        print str(d.sheet_name)
+        print str(d.location[0])
+        print str(d.location[1])
+        print str(d.value)
+
+        row = d.location[0]
+        col = d.location[1]
+        value = d.value
+
+        client.UpdateCell(row, col, value, config.speedsheet_id, worksheet_key)
 
    
 def sendEmail(exceptionMsg):
@@ -147,17 +206,19 @@ def main():
         client = getAuthorizedSpreadsheetClient()
 
         # get the data we care about
-        csvValue = getCSVData()
+        csvData = getCSVData()
 
         # send data to google
-        editGoogleSheet(client, csvValue, startTimeFormat)
+        editGoogleSheet(client, csvData, startTimeFormat)
 
 
     except Exception, e:
         # if an exception occurs, we should email an alert and log it
         # -----------------------------------------------------------
         logging.warning('Script threw an execption: ' + str(e))
-        sendEmail(e.message)
+
+        #commented out alert email because vern's computer wont let it happen
+        #sendEmail(e.message) 
         
         print 'Script threw an execption'
         print str(e.message)
