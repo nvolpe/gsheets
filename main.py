@@ -96,18 +96,6 @@ def editGoogleSheet(client, data, timeStamp):
     #get the current worksheet
     worksheet_feed = client.GetWorksheetsFeed(config.speedsheet_id)
 
-    date_row = config.cell_for_date[0]
-    date_col = config.cell_for_date[1]
-
-    #find the sheet name we care about
-    for entry in worksheet_feed.entry:
-        if entry.title.text == config.cell_for_date_worksheet:
-            worksheet_key = entry.id.text.split('/')[-1]
-
-            #time stamp a cell plz
-            client.UpdateCell(date_row, date_col, timeStamp, config.speedsheet_id, worksheet_key)
-             
-
     for d in data:
 
         #find the sheet name we care about
@@ -116,7 +104,7 @@ def editGoogleSheet(client, data, timeStamp):
                 worksheet_entry = entry
                 break
             else: # no-break
-                print "Worksheet not found!"
+                print "Worksheet skipped"
 
         worksheet_key = worksheet_entry.id.text.split('/')[-1]
 
@@ -131,7 +119,18 @@ def editGoogleSheet(client, data, timeStamp):
 
         client.UpdateCell(row, col, value, config.speedsheet_id, worksheet_key)
 
-   
+
+    date_row = config.cell_for_date[0]
+    date_col = config.cell_for_date[1]
+
+    #find the sheet name we care about for date
+    for entry in worksheet_feed.entry:
+        if entry.title.text == config.cell_for_date_worksheet:
+            worksheet_key = entry.id.text.split('/')[-1]
+
+            #time stamp a cell plz
+            client.UpdateCell(date_row, date_col, timeStamp, config.speedsheet_id, worksheet_key)
+             
 def sendEmail(exceptionMsg):
     """send email because i dont want the team to be unaware of mistakes"""
 
