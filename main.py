@@ -104,7 +104,7 @@ def editGoogleSheet(client, data, timeStamp):
                 worksheet_entry = entry
                 break
             else: # no-break
-                print "Worksheet skipped"
+                print "finding worksheet"
 
         worksheet_key = worksheet_entry.id.text.split('/')[-1]
 
