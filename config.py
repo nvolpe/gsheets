@@ -21,6 +21,8 @@ cell_for_date = [4, 4]
 cell_for_date_worksheet = 'suckadick'
 
 
+# add objects to this array if you want to add more data to the google sheet,
+# just make sure you list the correct name for the googlesheet and the data rows/columns are configured correctly
 data_lookup =  [
     {
         'sheet_name': 'suckadick',

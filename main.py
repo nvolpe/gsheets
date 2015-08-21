@@ -2,10 +2,8 @@
 Scheduled task to automate inserting values from csv to google spreedhseets
 
 Installaiton notes:
-1. pip install gspread
-2. pip install python-dateutil
-4. follow these instructions for OAuth2: http://gspread.readthedocs.org/en/latest/oauth2.html
-5. update config.py to match your environment
+1. install the python modules referenced in this project, ya im too lazy to explicity state which ones
+2. update config.py to match your environment
 
 Author: NVolpe
 Date: 8/16/2015
@@ -28,14 +26,14 @@ from oauth2client.tools import run
 from dateutil.tz import tzlocal
 
 
-class slut():
+class googleSheetData():
     def __init__(self, sheet_name, location, value):
         self.sheet_name = sheet_name
         self.location = location
         self.value = value
 
 def getGdataCredentials():
-
+    """get creds"""
     client_secrets = "credentials.json"
     storedCreds = "creds.dat"
     scope = ["https://spreadsheets.google.com/feeds"]
@@ -53,6 +51,7 @@ def getGdataCredentials():
     return credentials
 
 def getAuthorizedSpreadsheetClient():
+    """login"""
 
     client_secrets = "client_secrets.json"
     storedCreds = "creds.dat"
@@ -74,11 +73,7 @@ def getCSVData():
     #close the file
     file.close()
 
-    # get the value we care about and return it 
-    # example: data[2][3]
-
     configData = config.data_lookup
-
     gsheetData = []
 
     for item in configData:
@@ -86,35 +81,23 @@ def getCSVData():
         csv_location = item['csv_location']
         gsheet_location = item['gsheet_location']
 
+        # get the value we care about and return it 
+        # example: data[2][3]
         value = data[csv_location[0]][csv_location[0]]
 
-        slutdata = slut(sheet_name, gsheet_location, value)
-        gsheetData.append(slutdata)
-
-        print 'data_for_gsheet: ' + value
-
-        #slut()
-        #print item[0]
-        #print item[1]
+        googleData = googleSheetData(sheet_name, gsheet_location, value)
+        gsheetData.append(googleData)
 
     return gsheetData
 
 def editGoogleSheet(client, data, timeStamp):
     """edit our google sheet"""
-    #this will probably change to more data objects rather than 1 value and mulitple rows/colums to keep track of
 
     #get the current worksheet
-    #feed = client.GetWorksheetsFeed(config.speedsheet_id)
-    #id_parts = feed.entry[0].id.text.split('/')
-    #curr_wksht_id = id_parts[len(id_parts) - 1]
-
-    entry  = client.GetSpreadsheetsFeed(config.speedsheet_id)
-    print entry.title
-    worksheet_feed  = client.GetWorksheetsFeed(config.speedsheet_id)
+    worksheet_feed = client.GetWorksheetsFeed(config.speedsheet_id)
 
     date_row = config.cell_for_date[0]
     date_col = config.cell_for_date[1]
-
 
     #find the sheet name we care about
     for entry in worksheet_feed.entry:
@@ -130,7 +113,6 @@ def editGoogleSheet(client, data, timeStamp):
         #find the sheet name we care about
         for entry in worksheet_feed.entry:
             if entry.title.text == d.sheet_name:
-                print 'yay suck a dick was found'
                 worksheet_entry = entry
                 break
             else: # no-break
@@ -138,10 +120,10 @@ def editGoogleSheet(client, data, timeStamp):
 
         worksheet_key = worksheet_entry.id.text.split('/')[-1]
 
-        print str(d.sheet_name)
-        print str(d.location[0])
-        print str(d.location[1])
-        print str(d.value)
+        #print str(d.sheet_name)
+        #print str(d.location[0])
+        #print str(d.location[1])
+        #print str(d.value)
 
         row = d.location[0]
         col = d.location[1]
@@ -190,7 +172,7 @@ def main():
 
         # Get the current date/time with the timezone.
         startTimeStamp = datetime.datetime.now(tzlocal())
-        startTimeFormat = startTimeStamp.strftime("%Y-%m-%d:%S %I:%M %p %Z")
+        startTimeFormat = startTimeStamp.strftime("%Y-%m-%d %I:%M:%S %p %Z")
 
         # log start of script
         logging.info('Script Started at:  ' + startTimeFormat)
